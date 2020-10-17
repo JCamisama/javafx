@@ -48,4 +48,9 @@ public class KautotuKud implements Initializable {
     comboZerbitzua.getItems().add(0,"Dropbox");
   }
 
+  public void onClickComboBoxen(ActionEvent actionEvent) {
+  }
+
+  public void onClickBotoian(ActionEvent actionEvent) {
+  }
 }

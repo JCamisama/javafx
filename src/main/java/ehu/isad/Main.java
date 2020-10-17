@@ -6,8 +6,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,12 +34,12 @@ public class Main extends Application {
 
   private void pantailakKargatu() throws IOException {
 
-    FXMLLoader loaderKautotu = new FXMLLoader(getClass().getResource("/kautotu.fxml"));
+    FXMLLoader loaderKautotu = new FXMLLoader(getClass().getResource("/Liburuak.fxml"));
     kautotuUI = (Parent) loaderKautotu.load();
     kautotuKud = loaderKautotu.getController();
     kautotuKud.setMainApp(this);
 
-    FXMLLoader loaderMain = new FXMLLoader(getClass().getResource("/main.fxml"));
+    FXMLLoader loaderMain = new FXMLLoader(getClass().getResource("/xehetasunak.fxml"));
     mainUI = (Parent) loaderMain.load();
     mainKud = loaderMain.getController();
     mainKud.setMainApp(this);
