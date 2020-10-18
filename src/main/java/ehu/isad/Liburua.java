@@ -16,7 +16,9 @@ public class Liburua {
     }
 
     public String getIrudiarenUrl(){
-        return this.thumbnail_url;
+
+        //return this.thumbnail_url;
+        return this.tamainaErtainekoIrudiaLortu();
     }
 
      @Override
@@ -29,6 +31,14 @@ public class Liburua {
                  ", details=" + details +
                  ", preview='" + preview + '\'' +
                  '}';
+     }
+
+     private String tamainaErtainekoIrudiaLortu(){
+
+        String[] zatiak =this.thumbnail_url.split("-");
+        String tamainaErtainekoa = zatiak[0]+"-M.jpg";
+
+        return tamainaErtainekoa;
      }
 
 
