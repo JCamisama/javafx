@@ -29,9 +29,6 @@ public class LiburuDetaileak {
 
 
     public Image getIrudia(){
-        if(this.irudia == null){
-            System.out.println("Liburu honek ez dauka irudirik esleituta, null bueltatuko da...");
-        }
         return this.irudia;
     }
 
