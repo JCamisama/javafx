@@ -41,8 +41,8 @@ public class LiburuKud implements Initializable {
                 Sarea.bilatuLiburuaIsbnrekin("9781491906187")
         );
 
-        comboZerbitzua.setItems(liburuList);
-        comboZerbitzua.setEditable(false);
+        this.comboZerbitzua.setItems(liburuList);
+        this.comboZerbitzua.setEditable(false);
         this.comboBoxekoEtiketaEguneratu();
     }
 

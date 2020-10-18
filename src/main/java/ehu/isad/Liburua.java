@@ -12,7 +12,7 @@ public class Liburua {
 
     //Gainontzeko metodoak
     public LiburuDetaileak getDetails(){
-         return details;
+         return this.details;
     }
 
     public String getIrudiarenUrl(){
