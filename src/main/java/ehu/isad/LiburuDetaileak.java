@@ -1,46 +1,41 @@
 package ehu.isad;
 
-public class LiburuDetaileak {
-    //atributuak
-    private String[]    publishers;
-    /*private String      key;
-    private String      source_records;
-    private String      created;*/
-    private String      title;
-    private Integer         number_of_pages;
-    /*private String      covers;
-    private String      local_id;
-    private String      isbn_13;
-    private String      isbn_10;
-    private String      latest_revision;
-    private String      last_modified;
-    private String[]    authors;
-    private String      publish_date;
-    private String[]    works;
-    private String      type;
-    private String      revision;*/
+import javafx.scene.image.Image;
 
-    //Eraikitzailea
-    public LiburuDetaileak(){}
+public class LiburuDetaileak {
+
+    //Atributuak
+    private String[]    publishers;
+    private String      title;
+    private Integer     number_of_pages;
+    private Image       irudia;
+
+
 
     //Gainontzeko metodoak
-
-
-
-
     public String getIzena(){
         return this.title;
     }
 
+
     public int getOrriKop(){
         return this.number_of_pages;
     }
+
 
     public String[] getArgitaletxeak(){
         return this.publishers;
     }
 
 
+    public Image getIrudia(){
+        if(this.irudia == null){
+            System.out.println("Liburu honek ez dauka irudirik esleituta, null bueltatuko da...");
+        }
+        return this.irudia;
+    }
 
-
+    public void setIrudia(Image pIrudia){
+        this.irudia = pIrudia;
+    }
 }

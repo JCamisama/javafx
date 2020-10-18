@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 public class XehetasunKud {
@@ -19,12 +20,15 @@ public class XehetasunKud {
     private Text argitaletxeContainer;
     @FXML
     private Text orriKopContainer;
+    @FXML
+    private ImageView irudiContainer;
 
-
+    //Metodoak
     public void liburuarenDatuakPublikatu(LiburuDetaileak pDetaileak){
         this.izenburuContainer.setText( pDetaileak.getIzena() );
         this.argitaletxeContainer.setText( pDetaileak.getArgitaletxeak()[0] );
         this.orriKopContainer.setText( String.valueOf( pDetaileak.getOrriKop() ) );
+        this.irudiContainer.setImage(pDetaileak.getIrudia());
     }
 
     public void setMainApp(Liburuak liburuak) {
@@ -32,7 +36,6 @@ public class XehetasunKud {
     }
 
     public void onClickBotoian(ActionEvent actionEvent) {
-
         this.liburuApp.liburuakErakutsi();
     }
 }

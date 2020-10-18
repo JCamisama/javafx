@@ -8,16 +8,15 @@ public class Liburua {
     String preview_url;
     String thumbnail_url;
     LiburuDetaileak details;
-    //String details;
     String preview;
 
-
-     //Eraikitzailea
-     //public Liburua(){}
-
-     //Gainontzeko metodoak
+    //Gainontzeko metodoak
     public LiburuDetaileak getDetails(){
          return details;
+    }
+
+    public String getIrudiarenUrl(){
+        return this.thumbnail_url;
     }
 
      @Override

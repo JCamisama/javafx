@@ -2,22 +2,15 @@ package ehu.isad.controller;
 
 
 import ehu.isad.LiburuDetaileak;
-import ehu.isad.LiburuKudeatzailea;
+import ehu.isad.utils.Sarea;
 import ehu.isad.Liburuak;
-import ehu.isad.Main;
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.io.IOException;
@@ -41,11 +34,11 @@ public class LiburuKud implements Initializable {
 
         ObservableList<LiburuDetaileak> liburuList = FXCollections.observableArrayList();
         liburuList.addAll(
-                LiburuKudeatzailea.bilatuLiburuaIsbnrekin("9781491920497"),
-                LiburuKudeatzailea.bilatuLiburuaIsbnrekin("1491910399"),
-                LiburuKudeatzailea.bilatuLiburuaIsbnrekin("1491946008"),
-                LiburuKudeatzailea.bilatuLiburuaIsbnrekin("1491978236"),
-                LiburuKudeatzailea.bilatuLiburuaIsbnrekin("9781491906187")
+                Sarea.bilatuLiburuaIsbnrekin("9781491920497"),
+                Sarea.bilatuLiburuaIsbnrekin("1491910399"),
+                Sarea.bilatuLiburuaIsbnrekin("1491946008"),
+                Sarea.bilatuLiburuaIsbnrekin("1491978236"),
+                Sarea.bilatuLiburuaIsbnrekin("9781491906187")
         );
 
         comboZerbitzua.setItems(liburuList);
@@ -86,11 +79,7 @@ public class LiburuKud implements Initializable {
     }
 
     private void unekoLiburuaEguneratu(){
-
-       // this.comboZerbitzua.setOnAction(e -> {
             this.unekoLiburua = (LiburuDetaileak)this.comboZerbitzua.getValue();
-       // });
-
     }
 
     public void setMainApp(Liburuak liburuak) {
