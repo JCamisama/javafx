@@ -45,12 +45,38 @@ public class KautotuKud implements Initializable {
         }
     }
 
+    @FXML
+    public void onClickEzabatu(ActionEvent actionEvent){
+
+        //ComboBox-etik ezabatzen
+        String ezabatuBeharrekoa = (String) this.comboZerbitzua.getValue();
+        this.comboZerbitzua.getItems().remove(ezabatuBeharrekoa);
+
+        //Datu-basetik ezabatzen
+        ZerbitzuKud.getInstance().ezabatuZerbitzua(ezabatuBeharrekoa);
+    }
+
+    @FXML
+    public void onClickGehitu(ActionEvent actionEvent){
+
+        //ComboBox-ean gehitzen
+        String gehituBeharrekoa = (String) this.comboZerbitzua.getValue();
+        this.comboZerbitzua.getItems().add(gehituBeharrekoa);
+
+        //Datu-basean gehitzen
+        ZerbitzuKud.getInstance().gehituZerbitzua(gehituBeharrekoa);
+
+    }
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         List<String> herrialdeakList = ZerbitzuKud.getInstance().lortuZerbitzuak();
         ObservableList<String> herrialdeak = FXCollections.observableArrayList(herrialdeakList);
 
         comboZerbitzua.setItems( herrialdeak );
+        comboZerbitzua.setEditable(true);
 
     }
 
